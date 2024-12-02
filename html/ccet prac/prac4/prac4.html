@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berserk Manga</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000; /* Set a solid black background */
+            color: white;
+            position: relative;
+        }
+
+        /* Blood stained overlay for whole page */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Dark opaque overlay */
+            z-index: -1;
+        }
+
+        /* Centered image styling */
+        .about-image {
+            display: block;
+            margin: 0 auto;
+            width: 80%; /* Adjust size as needed */
+            border-radius: 10px;
+            filter: grayscale(50%); /* Darken and make image gritty */
+            max-height: 400px; /* Limit max height */
+            object-fit: cover; /* Maintain aspect ratio */
+        }
+
+        .hero-section {
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            font-family: 'Cinzel', serif; /* Gothic styled font */
+            position: relative;
+            z-index: 1;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Character overlay styling */
+        .character-card {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            padding-top: 20px; /* Space from top */
+            z-index: 1; /* Ensure it stays above background */
+        }
+
+        .custom-card {
+            background-color: rgba(33, 33, 33, 0.9);
+            border: none;
+            color: white;
+            border-left: 5px solid #c0392b; /* Blood red accents */
+            margin: 10px; /* Space between cards */
+            flex: 1; /* Allow cards to grow and fill the space */
+            max-width: 300px; /* Limit card width */
+        }
+
+        .custom-card img {
+            width: 100%;
+            height: 200px; /* Adjust height as needed */
+            object-fit: cover;
+            border-radius: 5px;
+            filter: grayscale(50%); /* Darken and make images gritty */
+        }
+
+        /* Gallery Section Styles */
+        .gallery {
+            position: relative;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            overflow: hidden;
+            margin-top: 20px; /* Space above gallery */
+        }
+
+        .gallery img {
+            border-radius: 10px; /* Rounded corners for all images */
+            margin: -15px; /* Negative margin to create overlap effect */
+            width: calc(33.33% - 30px); /* Three images per row, adjusted for margin */
+            max-width: 400px; /* Set max width */
+            object-fit: cover; /* Maintain aspect ratio */
+            height: 200px; /* Fixed height for images */
+        }
+
+        .footer {
+            background-color: #1b1b1b;
+            padding: 20px;
+            text-align: center;
+            border-top: 3px solid #c0392b;
+        }
+
+        a {
+            color: #e74c3c;
+            text-decoration: none;
+        }
+
+        /* Custom bullet points - blood drop effect */
+        .about-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .about-list li::before {
+            content: "💉 ";
+            margin-right: 10px;
+            color: #e74c3c; /* Blood drop emoji */
+        }
+
+        .btn-warning {
+            background-color: #c0392b; /* Dark red buttons */
+            border: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .btn-warning:hover {
+            background-color: #e74c3c;
+        }
+
+        .character-details {
+            padding: 15px;
+        }
+
+        h2 {
+    text-align: center; /* Center all h2 headings */
+}
+
+.lore-image {
+    border-radius: 50%; /* Circular images */
+    width: 200px; /* Set a fixed width */
+    height: 200px; /* Set a fixed height */
+    object-fit: cover; /* Maintain aspect ratio */
+    margin: 10px; /* Space between images */
+}
+
+.lore-gallery {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center images */
+    flex-wrap: wrap; /* Allow wrapping */
+    margin-top: 20px; /* Space above the gallery */
+}
+
+.brand-image {
+    display: block; /* Make the image a block element */
+    margin: 0 auto; /* Center the image horizontally */
+    max-width: 100%; /* Ensure it doesn't overflow the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Make it circular */
+    width: 200px; /* Set a fixed width */
+    height: 200px; /* Set a fixed height */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>Berserk</h1>
+            <p>The Dark Fantasy Masterpiece by Kentaro Miura</p>
+            <a href="#about" class="btn btn-warning mt-3">Learn More</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container mt-5">
+        <div class="text-center">
+            <img src="berserk.jpeg" class="about-image" alt="Berserk Manga">
+            <h2>About Berserk</h2>
+            <p>
+                Berserk is a Japanese manga series written and illustrated by Kentaro Miura. Set in a medieval-inspired world filled with demons, knights, and dark magic, it follows Guts, a lone mercenary, as he struggles against monstrous foes and his own inner demons.
+            </p>
+            <ul class="about-list">
+                <li>First published in 1989 and continuing for decades.</li>
+                <li>Famous for its intricate artwork and complex characters.</li>
+                <li>Focuses on the themes of struggle, power, and the human condition.</li>
+                <li>A critical exploration of friendship, ambition, and betrayal.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Lore Section -->
+   <!-- Lore Section -->
+<section id="lore" class="container mt-5">
+    <h2>Lore</h2>
+    <p>
+        *Berserk*, created by Kentaro Miura, is set in a dark medieval fantasy world filled with demons, corruption, and a relentless struggle for power. The story follows **Guts**, a lone mercenary with a tragic past marked by betrayal and loss. Armed with a massive sword and driven by vengeance, Guts battles both human foes and monstrous entities known as Apostles. Central to the lore is the **God Hand**, a group of powerful demonic beings who manipulate events in the world, often leading to despair and chaos.
+
+The series delves into themes of fate, free will, and the consequences of ambition, illustrated through the **Brand of Sacrifice**, which marks those chosen for sacrifice. **Casca**, Guts's love interest, plays a vital role in the narrative, embodying both vulnerability and strength. The story's complex characters, including Griffith, Guts's charismatic yet tragic rival, explore the nature of ambition and the price of dreams.
+
+As Guts seeks revenge and redemption, he encounters various factions, mythical creatures, and the dark realities of humanity, culminating in a profound exploration of suffering, sacrifice, and the quest for meaning in a harsh world. The lore is rich with symbolism, making *Berserk* a profound and haunting narrative.
+    </p>
+    <!-- Other lore paragraphs -->
+    
+   
+</section>
+
+<!-- Sacrifice Section -->
+<!-- Sacrifice Section -->
+<section id="sacrifice" class="container mt-5">
+    <h2 class="text-center">Sacrifice</h2>
+    <div class="text-center mt-4">
+        <img src="https://imgs.search.brave.com/F-iekRyIUs6lYj4EiWT5Cb5oPXLAvios98HLfE1K5K4/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2IwLzAx/L2Y1L2IwMDFmNTAy/NzYwYTM4YzhjMzgw/OTVkZjlhZjhiZGZh/LmpwZw" alt="Sacrifice in Berserk" class="img-fluid brand-image">
+    </div>
+    
+
+    <p>
+        The **Brand of Sacrifice** in *Berserk*, created by Kentaro Miura, is a powerful symbol of suffering and the complex nature of sacrifice. This mark appears on individuals chosen for sacrifice by the God Hand, representing their connection to a brutal fate. Characters like Guts and Casca bear the brand, which signifies their struggles and the torment they endure as they are hunted by demons. The brand embodies the dire consequences of ambition, as it often results from a pact made for power or survival. For the branded, it is a constant reminder of their past choices and the heavy psychological burden of guilt and fear. 
+
+As they navigate their dark world, the brand serves as both a curse and a catalyst, propelling Guts, in particular, to fight against the forces that seek to destroy him. This duality reflects the series' exploration of human nature, emphasizing the tension between light and darkness within each character. Ultimately, the Brand of Sacrifice captures the essence of *Berserk*, illustrating the cost of desire and the relentless struggle for redemption amid overwhelming odds.
+    </p>
+</section>
+
+
+   
+
+    <!-- Characters Section -->
+    <section id="characters" class="container mt-5">
+        <h2 class="text-center">Main Characters</h2>
+        <div class="character-card d-flex flex-wrap justify-content-center">
+            <div class="custom-card">
+                <img src="https://kingkirascastle.home.blog/wp-content/uploads/2019/05/40.jpg?w=768&h=550" class="card-img-top" alt="Guts">
+                <div class="card-body character-details">
+                    <h5 class="card-title">Guts</h5>
+                    <p><strong>Traits:</strong> Determined, Strong, Tragic</p>
+                    <p><strong>Backstory:</strong> Guts was born from the corpse of his mother and raised in a mercenary group. His life has been a constant battle against powerful foes and his own internal demons.</p>
+                    <p><strong>Abilities:</strong> Exceptional swordsman with unmatched strength and combat skills. Wields the Dragon Slayer, a massive sword.</p>
+                </div>
+            </div>
+            <div class="custom-card">
+                <img src="https://kingkirascastle.home.blog/wp-content/uploads/2019/05/90.jpg?w=768&h=543" class="card-img-top" alt="Griffith">
+                <div class="card-body character-details">
+                    <h5 class="card-title">Griffith</h5>
+                    <p><strong>Traits:</strong> Charismatic, Ambitious, Manipulative</p>
+                    <p><strong>Backstory:</strong> The leader of the Band of the Hawk, Griffith is a charismatic figure who aims to become a king, no matter the cost.</p>
+                    <p><strong>Abilities:</strong> Skilled in combat and strategy, with the ability to inspire loyalty in his followers.</p>
+                </div>
+            </div>
+            <div class="custom-card">
+                <img src="https://kingkirascastle.home.blog/wp-content/uploads/2019/05/76.jpg?w=768&h=623" class="card-img-top" alt="Casca">
+                <div class="card-body character-details">
+                    <h5 class="card-title">Casca</h5>
+                    <p><strong>Traits:</strong> Brave, Fierce, Loyal</p>
+                    <p><strong>Backstory:</strong> The only female commander in the Band of the Hawk, Casca has faced numerous challenges to prove her worth as a warrior.</p>
+                    <p><strong>Abilities:</strong> A skilled swordswoman with strong leadership qualities and combat prowess.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- God Hand Section -->
+  <!-- God Hand Section -->
+<section id="godhand" class="container mt-5">
+    <h2 class="text-center">God Hand</h2>
+    <p>
+        The God Hand are powerful, supernatural beings in Berserk who manipulate events from the shadows. 
+        They embody different aspects of fate and despair, serving as antagonists to Guts and his allies.
+    </p>
+    <div class="character-card d-flex flex-wrap justify-content-center">
+        <div class="custom-card">
+            <img src="https://imgs.search.brave.com/8uwTqLCaOcgFGJatbGI6KOMvReCKLSR_6LtkFL9qKbg/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMxLmNicmltYWdl/cy5jb20vd29yZHBy/ZXNzL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDIwLzA5L3ZvaWQt/YmVyc2Vyay5qcGc" class="card-img-top" alt="Void">
+            <div class="card-body character-details">
+                <h5 class="card-title">Void</h5>
+                <p><strong>Traits:</strong> Mysterious, Cold, Calculating</p>
+                <p><strong>Backstory:</strong> Void is the leader of the God Hand, representing the concept of ultimate nothingness. He often acts as the voice of reason among the God Hand, manipulating events to fit his vision of the world.</p>
+                <p><strong>Abilities:</strong> Possesses immense power to manipulate reality and has a deep understanding of the nature of existence.</p>
+            </div>
+        </div>
+        <div class="custom-card">
+            <img src="https://imgs.search.brave.com/9srdhSMYFV_WTi0VtOAq5cj8nM8AcQ8nQuEnRpLO4H8/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzA1Lzhl/L2VmLzA1OGVlZjkz/Y2MxZmM0MGFhNGFi/Y2MyZWY4NjRjNWJk/LmpwZw" class="card-img-top" alt="Slan">
+            <div class="card-body character-details">
+                <h5 class="card-title">Slan</h5>
+                <p><strong>Traits:</strong> Seductive, Sadistic, Manipulative</p>
+                <p><strong>Backstory:</strong> Slan embodies lust and temptation. She relishes in the suffering of others, often toying with her victims before delivering the final blow.</p>
+                <p><strong>Abilities:</strong> Has the power to manipulate people's desires and fears, using them to control and destroy.</p>
+            </div>
+        </div>
+        <div class="custom-card">
+            <img src="https://imgs.search.brave.com/zvo1MG5a0ZKynhSkio1CviBjvpEoTpJncLSs20pSAWA/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMud2lraWEubm9j/b29raWUubmV0L2Jl/cnNlcmsvaW1hZ2Vz/LzUvNWEvQ29ucmFk/X1Byb2ZpbF9NYW5n/YS5wbmcvcmV2aXNp/b24vbGF0ZXN0L3Nj/YWxlLXRvLXdpZHRo/LWRvd24vMjc1P2Ni/PTIwMTcwNTA0MTcx/MzUxJnBhdGgtcHJl/Zml4PWRl.jpeg" class="card-img-top" alt="Conrad">
+            <div class="card-body character-details">
+                <h5 class="card-title">Conrad</h5>
+                <p><strong>Traits:</strong> Cunning, Insightful, Deceptive</p>
+                <p><strong>Backstory:</strong> Conrad represents the concept of betrayal and treachery, using cunning strategies to manipulate both the living and the dead for his purposes.</p>
+                <p><strong>Abilities:</strong> Skilled in illusions and trickery, he can create false realities to ensnare his foes.</p>
+            </div>
+        </div>
+        <div class="custom-card">
+            <img src="https://imgs.search.brave.com/B24Hrr9Gq-KOBDF_rPla924WLa9MoaAIPaaZ5DdxrUA/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly92aWdu/ZXR0ZS53aWtpYS5u/b2Nvb2tpZS5uZXQv/YmVyc2Vyay9pbWFn/ZXMvYi9iNi9VYmlr/X01hbmdhLmpwZy9y/ZXZpc2lvbi9sYXRl/c3Qvc2NhbGUtdG8t/d2lkdGgtZG93bi8y/NjA_Y2I9MjAwODA2/MTAwOTU5MTA.jpeg" class="card-img-top" alt="Ubik">
+            <div class="card-body character-details">
+                <h5 class="card-title">Ubik</h5>
+                <p><strong>Traits:</strong> Egotistical, Charismatic, Manipulative</p>
+                <p><strong>Backstory:</strong> Ubik embodies the concept of illusion and perception, often seen as the most charismatic member of the God Hand. He uses his charm to deceive and mislead others.</p>
+                <p><strong>Abilities:</strong> Capable of creating powerful illusions and manipulating the perceptions of those around him.</p>
+            </div>
+        </div>
+        <div class="custom-card">
+            <img src="https://imgs.search.brave.com/dumHPemHpx6BZI2lh-JV7WjcpHdvqXZNDRQGcF71dYE/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMud2lraWEubm9j/b29raWUubmV0L3Zp/bGxhaW5zL2ltYWdl/cy9lL2VhL01hbmdh/X0U4Nl9Hb2RfSGFu/ZF9Db21wbGV0ZS5w/bmcvcmV2aXNpb24v/bGF0ZXN0L3NjYWxl/LXRvLXdpZHRoLWRv/d24vMTk3P2NiPTIw/MjQwNzE5MDE0MjM0.jpeg" class="card-img-top" alt="Femto">
+            <div class="card-body character-details">
+                <h5 class="card-title">Femto</h5>
+                <p><strong>Traits:</strong> Ambitious, Cold, Powerful</p>
+                <p><strong>Backstory:</strong> Femto is the transformed form of Griffith, who sacrificed his comrades to become a member of the God Hand. He represents ambition and the devastating cost of achieving one’s desires.</p>
+                <p><strong>Abilities:</strong> Has reality-warping powers, capable of bending fate itself, and is a formidable opponent in battle.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="container mt-5">
+        <h2 class="text-center">Gallery</h2>
+        <div class="gallery">
+            <img src="https://kingkirascastle.home.blog/wp-content/uploads/2019/05/74.jpg?w=768&h=565" alt="Berserk Art 1" class="gallery">
+            <img src="https://kingkirascastle.home.blog/wp-content/uploads/2019/05/65.jpg?w=768&h=586" alt="Berserk Art 2" class="gallery">
+            <img src="https://kingkirascastle.home.blog/wp-content/uploads/2019/05/69.jpg?w=768&h=768" alt="Berserk Art 3" class="gallery">
+            <img src="https://kingkirascastle.home.blog/wp-content/uploads/2019/05/67.jpg?w=768&h=1024" alt="Berserk Art 4" class="gallery">
+            <img src="https://kingkirascastle.home.blog/wp-content/uploads/2019/05/94.jpg?w=768&h=1024" alt="Berserk Art 5" class="gallery">
+            <img src="https://kingkirascastle.home.blog/wp-content/uploads/2019/05/90.jpg?w=768&h=768" alt="Berserk Art 6" class="gallery">
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer mt-5">
+        <p>&copy; 2024 Berserk Manga Fan Page. All rights reserved.</p>
+        <p>
+            <a href="#about">About</a> | 
+            <a href="#lore">Lore</a> | 
+            <a href="#sacrifice">Sacrifice</a> | 
+            <a href="#characters">Characters</a> | 
+            <a href="#godhand">God Hand</a>
+        </p>
+    </footer>
+
+   
+</body>
+</html>

@@ -1,0 +1,113 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    color: #9a071a;
+    background-color: #c1e432;
+  }
+  
+  
+  
+  header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(banner.jpg);
+    background-size: cover;
+    background-position: center;
+  
+    align-items: center;
+    justify-content: center;
+    margin: none;
+  }
+  
+  
+  .header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgb(34, 3, 39);
+  }
+  
+  .header-content h1 {
+    font-size: 3em;
+    margin: 0;
+  }
+  
+  .profile-pic {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 5px solid #2b0957;
+    object-fit: cover;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 50px;
+  }
+  
+  main {
+    background-color: #570e57;
+    padding: 40px 20px;
+  }
+  
+  .section {
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+    background-color: rgb(168, 149, 237);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .section h2 {
+    color: #88260d;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #dbbed9;
+    padding-bottom: 5px;
+  }
+  
+  .section p, .section ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .section ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .section ul li {
+    margin-bottom: 10px;
+  }
+  
+  .section ul li strong {
+    display: block;
+    font-size: 1.2em;
+    color: #c2ea6c;
+  }
+  
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .skills li {
+    background-color: #c0da19;
+    color: rgb(2, 1, 1);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+    flex: 1 1 30%;
+    text-align: center;
+  }
+  
+  .contact p {
+    display: flex;
+    align-items: center;
+  }
+  
+  .contact i {
+    margin-right: 10px;
+    color: #b2f326;
+  }

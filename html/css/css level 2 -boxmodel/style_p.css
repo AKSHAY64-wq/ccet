@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+#navbar{
+    height: 60px;
+    background-color: black;
+}
+#logo{
+    color: yellow;
+}
+a{
+    margin-right: 200px;
+}
+button{
+    background-color: burlywood;
+    color: black;}

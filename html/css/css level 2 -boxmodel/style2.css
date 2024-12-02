@@ -1,0 +1,22 @@
+div{
+    height: 100px;
+    width: 100px;
+    background-color: brown;
+    /* border-width: 5px;
+    border-color: blue;
+    border-style: dotted; */
+    border: 2px solid blue;
+    text-align:left;
+    /* border-radius: 50%; or we can use px */
+    /* padding-left: 25px ;
+    padding-bottom: 50px; */
+    /* padding: 25px; sabko 25*/
+    /* padding: 11px  12px  13px 14px;
+    margin-top: 50px;
+    margin-bottom: 50px; */
+     margin: 25px;
+      /*also margin 1px 2px 3px 4px;  */
+    padding: 25px;
+    
+
+}
